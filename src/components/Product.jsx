@@ -24,12 +24,12 @@ function Products({post}){
                 <p >{post.description.split(" ").slice(0,10).join(" ")+"..."}</p>
             </div>
             <div className="img-div">
-                <img src={`${post.image}`}/>
+                <img src={`${post.image}`} alt="product img"/>
             </div>
             </div>
             <div className="price-btn">
                 <p>{"$"+post.price}</p>
-                {cart.some((p)=> p.id==post.id)?(<button onClick={removeHandler}>Remove Item</button>):(<button onClick={addtocartHandler}>Add to cart</button>)}
+                {cart.some((p)=> p.id===post.id)?(<button onClick={removeHandler}>Remove Item</button>):(<button onClick={addtocartHandler}>Add to cart</button>)}
             </div>
 
         </div>
