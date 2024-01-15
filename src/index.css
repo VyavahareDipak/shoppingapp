@@ -1,13 +1,292 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100;800&family=Poppins:wght@500&display=swap');
+
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Onest', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.navbar{
+  width: 100vw;
+  border: 2px solid black;
+  background-color: rgb(17, 13, 37);
+  position: fixed;
+  top: 0;
+}
+
+.navbar-main{
+  display: flex;
+  margin: auto;
+  width: 75%;
+  /* border: 2px solid black; */
+  justify-content: space-between;
+  align-items: center;
+  height: 55px;
+  color: white;
+ 
+}
+
+.nav-home{
+  display: flex;
+  align-items: center;
+  color: white; 
+  text-decoration: none;
+  font-size: large;
+}
+
+.nav-logo{
+  color: white;
+ 
+  height: 30px;
+  width: 30px;
+  margin-left:10px;
+
+}
+.logo-counter{
+  position: relative;
+  /* border: 2px solid white; */
+  padding:8px 5px 0px 0px ;
+}
+.nav-counter{
+  position: absolute;
+  background-color: #48f721;
+  border-radius: 20px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  right:0 ;
+  top: 0;
+}
+
+.not-found{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  /* border: 2px solid black; */
+} 
+
+.home{
+  display: flex;
+  flex-wrap: wrap;
+  
+  max-width: 75%; /* Adjust the max-width as needed */
+  padding: 2px; /* Adjust the padding as needed */
+  margin-top: 60px ; /* Center the container horizontally */
+  gap: 20px 40px; /* Ad*/
+  align-items: center;
+  
+
+}
+
+.product{
+   display:  flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-between ;
+   width: 250px;
+   height: 350px;
+   border-radius:5px ;
+   /* border: 2px solid black; */
+   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+   padding: 5px;
+   background: white;
+}
+
+.product:hover{
+ 
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+  transition: all   0.4sec ;
+  
+}
+
+.img-div{
+    height: 190px;
+    width: 225px;
+    overflow: hidden;
+    padding: 10px;
+    /* border: 2px solid black; */
+    
+}
+
+.img-div img{
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: auto;
+  
+}
+
+.title{
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom:10px ;
+}
+
+.description{
+   font-size: 11px;
+   color:rgb(170, 167, 167) ;
+   /* border: 2px solid black; */
+
+}
+
+.price-btn{
+  display: flex;
+  margin: 5px;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  color: #1b8403;
+}
+
+.price-btn button{
+  color: black;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 20px;
+  width: 120px;
+  padding: 4px;
+  
+}
+
+.price-btn button:hover{
+  color: white;
+  background-color: black;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+}
+
+.title-img{
+   /* width: 70%; */
+   padding: 15px;
+   height: 220px;
+}
+
+.cart{
+  width: 60%;
+  /* border: 2px solid black; */
+  margin: 55px auto;
+  display: flex;
+  align-items: center;
+  
+}
+
+.cartitem{
+  padding: 0px;
+  width: 500px;
+  border-top:2px solid rgb(17, 13, 37);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+
+.cart-text{
+  /* padding: 10px; */
+  /* margin: 8px; */
+}
+
+.cart-img {
+  width: 270px; /* Set the width of your cart-img container */
+  height: 220px; /* Set the height of your cart-img container */
+  overflow: hidden; /* Hide any content that overflows the container */
+  border-radius: 8px; /* Optional: add rounded corners to the container */
+}
+
+.cart-img img {
+  width: 100%; /* Make the image take 100% of the container width */
+  height: 100%; /* Make the image take 100% of the container height */
+  object-fit: cover; /* Maintain the aspect ratio and cover the entire container */
+  display: block;
+}
+
+.cart-item-summary{
+  display: flex;
+  align-items: center;
+
+  
+}
+
+.cart-costing{
+  margin: 40px;
+  padding: 10px;
+
+}
+
+.summary{
+  font-size:40px;
+  font-weight: 600;
+  color: #1b8403;
+}
+
+.cart-cost{
+  font-weight: 900;
+  font-size: large;
+}
+
+.price-delete{
+  color: #1b8403;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.delete-btn {
+  color: red;
+  background:rgba(242, 38, 38, 0.2);
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-radius: 50%;
+
+}
+.shop-now-btn{
+  color: black;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 20px;
+  width: 120px;
+  padding: 4px;
+  
+
+}
+.shop-now-btn:hover{
+  color: white;
+  background-color: black;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+}
+
+@media (max-width: 600px){
+  .cartitem{
+    width: 100%;
+  }
+  .cart-costing{
+    margin: 0px;
+  }
+}
+
+@media (max-width: 900px){
+  .cart-item-summary{
+    flex-wrap: wrap;
+  }
+}
+
+.home-wrap{
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  
 }
